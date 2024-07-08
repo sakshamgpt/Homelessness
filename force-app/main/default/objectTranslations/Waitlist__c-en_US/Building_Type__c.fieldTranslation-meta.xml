@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Building Type --></label>
+    <name>Building_Type__c</name>
+    <picklistValues>
+        <masterLabel>All ages</masterLabel>
+        <translation><!-- All ages --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All ages co-op</masterLabel>
+        <translation><!-- All ages co-op --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All ages non-profit</masterLabel>
+        <translation><!-- All ages non-profit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior only</masterLabel>
+        <translation><!-- Senior only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

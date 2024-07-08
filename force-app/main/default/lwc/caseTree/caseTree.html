@@ -1,0 +1,35 @@
+<template>
+    <template if:true={caseTreeData}>
+        <lightning-card title="Case Tree">
+            <template for:each={caseTreeData} for:item="caseItem">
+                <div key={caseItem.Id}>
+                    <h2>Case: {caseItem.CaseNumber}</h2>
+                    <template for:each={caseItem.CaseParticipantCase} for:item="participant">
+                        <div key={participant.Id}>
+                            <h3>Participant: {participant.Name}</h3>
+                            <lightning-button label="Create Care Plan" data-participant-id={participant.Id} onclick={handleCreateCarePlan}></lightning-button>
+                            <template for:each={participant.CarePlanCase} for:item="carePlan">
+                                <div key={carePlan.Id}>
+                                    <h4>Care Plan: {carePlan.Name}</h4>
+                                    <!-- <lightning-button label="Create Benefit" data-care-plan-id={carePlan.Id} onclick={handleCreateBenefit}></lightning-button>
+                                    <template for:each={carePlan.Benefits__r} for:item="benefit">
+                                        <div key={benefit.Id}>
+                                            <h5>Benefit: {benefit.Name}</h5>
+                                        </div>
+                                    </template> -->
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </lightning-card>
+    </template>
+    <template if:true={error}>
+        <div class="slds-text-color_error">
+            <template for:each={error.body.message} for:item="message">
+                <p key={message}>{message}</p>
+            </template>
+        </div>
+    </template>
+</template>

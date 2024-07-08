@@ -1,0 +1,29 @@
+footer.custom-footer {
+    background-color: rgb(42, 56, 141);
+    color: #ffffff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed; /* Ensure it stays at the bottom */
+}
+
+.custom-footer p {
+    margin: 0;
+}
+
+.slds-list_horizontal .slds-item {
+    margin-right: 10px;
+}
+
+.slds-list_horizontal .slds-item:last-child {
+    margin-right: 0;
+}
+
+.slds-text-link_reset {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.slds-text-link_reset:hover {
+    text-decoration: underline;
+}

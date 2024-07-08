@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupancy_Percentage__c</fullName>
+    <formula>IF(ISBLANK(Total_Beds__c), null,
+    IF(Total_Beds__c &lt;= 0, 0,
+        (1 - (Vacant_Beds__c / Total_Beds__c))
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Occupancy Percentage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

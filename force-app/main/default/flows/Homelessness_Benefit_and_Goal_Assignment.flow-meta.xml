@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Benefit and Goal Assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Benefit and Goal Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Care_Plan_Screen</name>
+        <label>Care Plan Screen</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>CarePlanDisplay</name>
+            <fieldText>&lt;p&gt;Create a Care Plan. The Care Plan is meant to capture a high level path to achieve for you client and client&apos;s household. For example, maybe the high level plan is to &apos;Secure Long-Term Housing&apos;. This Care Plan will set the stage for what program Benefits can be assigned and then, at a more granular level, what specifc goals need to be achieved.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Care_Plan_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

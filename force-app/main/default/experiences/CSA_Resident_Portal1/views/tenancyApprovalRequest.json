@@ -1,0 +1,76 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "336355e7-927f-4470-b515-fc29953b0d89",
+  "label" : "Tenancy Approval Request",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "edcde05c-84b1-436e-9f23-df61fa0a1210",
+          "columns" : [ {
+            "UUID" : "6139fea8-778d-45dc-9089-4eec7b71d16a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "edcde05c-84b1-436e-9f23-df61fa0a1210",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "dir" : "ltr",
+            "flexipageRegionWidth" : "LARGE",
+            "inline" : false,
+            "inlineLabel" : "Launch HET/TenancyApprovalRequest",
+            "inlineVariant" : "brand",
+            "layout" : "lightning",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "c:hETTenancyApprovalRequestEnglish",
+          "id" : "d02c3863-46cd-4457-a934-018ac3d2f93a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6139fea8-778d-45dc-9089-4eec7b71d16a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1d9886ae-bf67-407d-a21d-36c6624d61ac",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Tenancy Approval Request"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "568617df-1f3e-4211-9029-e0a3339ba9aa",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ef551885-d101-4ecf-a832-d1455babeb80",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-tenancy-approval-request"
+}

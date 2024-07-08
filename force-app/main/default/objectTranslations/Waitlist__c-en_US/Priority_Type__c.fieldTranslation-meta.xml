@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Priority Type --></label>
+    <name>Priority_Type__c</name>
+    <picklistValues>
+        <masterLabel>01 - VOFV</masterLabel>
+        <translation><!-- 01 - VOFV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01 - VOHT</masterLabel>
+        <translation><!-- 01 - VOHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02 - Overhoused</masterLabel>
+        <translation><!-- 02 - Overhoused --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03 - Medical</masterLabel>
+        <translation><!-- 03 - Medical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04 - Insitu</masterLabel>
+        <translation><!-- 04 - Insitu --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

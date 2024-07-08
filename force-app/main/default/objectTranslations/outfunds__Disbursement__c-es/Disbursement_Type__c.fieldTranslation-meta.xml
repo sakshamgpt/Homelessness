@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Disbursement Type --></label>
+    <name>Disbursement_Type__c</name>
+    <picklistValues>
+        <masterLabel>Bus Pass</masterLabel>
+        <translation><!-- Bus Pass --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food Voucher</masterLabel>
+        <translation><!-- Food Voucher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grocery Gift Card</masterLabel>
+        <translation><!-- Grocery Gift Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taxi Chit</masterLabel>
+        <translation><!-- Taxi Chit --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

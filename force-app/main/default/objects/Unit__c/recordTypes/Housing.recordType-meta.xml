@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing</fullName>
+    <active>true</active>
+    <description>This record type specifies the housing</description>
+    <label>Housing</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occupied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vacant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

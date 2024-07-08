@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_you_receiving_any_medical_care__c</fullName>
+    <label>Are you receiving any medical care?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mental Health</fullName>
+                <default>false</default>
+                <label>Mental Health</label>
+            </value>
+            <value>
+                <fullName>Addiction</fullName>
+                <default>false</default>
+                <label>Addiction</label>
+            </value>
+            <value>
+                <fullName>Dialysis</fullName>
+                <default>false</default>
+                <label>Dialysis</label>
+            </value>
+            <value>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+                <label>Diabetes</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

@@ -1,0 +1,12 @@
+h2, h3, h4, h5 {
+    margin: 0.5rem 0;
+}
+
+.slds-col {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.lightning-card {
+    padding: 1rem;
+}

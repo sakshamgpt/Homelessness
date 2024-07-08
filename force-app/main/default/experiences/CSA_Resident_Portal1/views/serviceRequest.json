@@ -1,0 +1,72 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "e24e9daf-a780-44ad-901b-7f322271d165",
+  "label" : "Service Request",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 11px;\">﻿</strong><strong>﻿Providing shelter or housing and supports for people who are homeless or at risk of homelessness</strong></h1><p> </p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "621aae00-407f-4fc0-bc1c-43bfd7076110",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "83e8e0c5-dfc5-4a85-97d8-4aabc31286e4",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerBackgroundColor" : "",
+        "bannerPosition" : "top",
+        "bannerSizePercent" : 35,
+        "borderRadius" : 20,
+        "boxShadow" : true,
+        "haveBanner" : false,
+        "iconBackgroundColor" : "rgb(255,255,255)",
+        "iconSize" : "medium",
+        "noImageColor" : "rgb(116,116,116)",
+        "overlay" : "rgba(0,0,0,0.01)",
+        "templateType" : "default",
+        "tileMenuEditor" : "Launch_Pre_Screening_Omni",
+        "titleColor" : "",
+        "titleFontSize" : "medium",
+        "titleHorizontalAlign" : "center"
+      },
+      "componentName" : "community_navigation:tileMenu",
+      "id" : "d4ee995c-d714-4892-ae4f-8e0a6873812a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f461b1a8-c13c-4f15-bead-64156830807b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "6a9a3849-def7-420e-8950-fb07a3470431",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Service Request"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "940122df-7fd4-4dcd-beaf-35fcce8d71e0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cfa7294f-9917-48fe-86b9-6f743f001ce2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-service-request"
+}

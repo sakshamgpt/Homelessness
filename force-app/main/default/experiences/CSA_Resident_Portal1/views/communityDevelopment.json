@@ -1,0 +1,54 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "dbce532f-23fe-46ec-b245-4c1bc263398a",
+  "label" : "Community Development",
+  "regions" : [ {
+    "id" : "722e6183-966d-4b7d-8513-994a8c6c50d8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "English",
+        "subType" : "HousingProviderExpressionOfInterest",
+        "theme" : "lightning",
+        "type" : "HET"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "caf26d37-4055-4dd6-8953-2766713f5d06",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e61622cc-c97e-42cd-8e82-5ef7c9ed0221",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "44507c3e-edb4-4c55-92d8-956a0050f9a9",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Community Development"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b3a449fd-ae88-4136-88c6-72c18291c294",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d900d678-7eea-4c8b-bb3a-564eb697733b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-community-development"
+}

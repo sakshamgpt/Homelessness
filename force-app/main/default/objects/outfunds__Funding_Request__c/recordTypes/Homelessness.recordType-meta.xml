@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Homelessness</fullName>
+    <active>true</active>
+    <label>Homelessness</label>
+    <picklistValues>
+        <picklist>Type_of_Request__c</picklist>
+        <values>
+            <fullName>Bus Pass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Voucher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grocery Gift Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxi Chit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

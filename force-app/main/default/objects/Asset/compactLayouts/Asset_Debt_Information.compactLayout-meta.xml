@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Debt_Information</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>Arrears__c</fields>
+    <fields>Credit_Card__c</fields>
+    <fields>Line_of_Credit__c</fields>
+    <fields>Mortages__c</fields>
+    <label>Asset Debt Information</label>
+</CompactLayout>

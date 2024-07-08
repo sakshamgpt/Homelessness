@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Contact Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Service Provider</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Building</relationshipLabel>
+    <relationshipName>Building</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

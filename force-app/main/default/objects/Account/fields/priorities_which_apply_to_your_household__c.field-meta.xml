@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>priorities_which_apply_to_your_household__c</fullName>
+    <label>Priorities which apply to your household</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Family violence</fullName>
+                <default>false</default>
+                <label>Family violence</label>
+            </value>
+            <value>
+                <fullName>Human trafficking</fullName>
+                <default>false</default>
+                <label>Human trafficking</label>
+            </value>
+            <value>
+                <fullName>Terminal illness</fullName>
+                <default>false</default>
+                <label>Terminal illness</label>
+            </value>
+            <value>
+                <fullName>Insitu (currently residing in subsidized building)</fullName>
+                <default>false</default>
+                <label>Insitu (currently residing in subsidized building)</label>
+            </value>
+            <value>
+                <fullName>Overhoused (currently in receipt of a subsidy)</fullName>
+                <default>false</default>
+                <label>Overhoused (currently in receipt of a subsidy)</label>
+            </value>
+            <value>
+                <fullName>No priorities apply</fullName>
+                <default>false</default>
+                <label>No priorities apply</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Create_Unit_Record</name>
+        <label>Create Unit Record</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <actionName>UnitCreationHandler</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>additionalFields</name>
+            <value>
+                <elementReference>AdditionalFieldsJSON</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>buildingId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>numberOfUnits</name>
+            <value>
+                <elementReference>Number_of_Units</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>unitNameFormat</name>
+            <value>
+                <elementReference>Unit_Name_Format</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>UnitCreationHandler</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>stagePicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Status__c</picklistField>
+        <picklistObject>Unit__c</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Create Unit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Unit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Create_Unit</name>
+        <label>Create Unit</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Cancel</backButtonLabel>
+        <connector>
+            <targetReference>Create_Unit_Record</targetReference>
+        </connector>
+        <fields>
+            <name>Number_of_Units</name>
+            <dataType>Number</dataType>
+            <fieldText>Number of Units</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+            <validationRule>
+                <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(186, 5, 23);&quot;&gt;The number of units should be less than 10000&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                <formulaExpression>{!Number_of_Units} &lt;= 10000</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>Unit_Name_Format</name>
+            <dataType>String</dataType>
+            <fieldText>Unit Name Format</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>&lt;p&gt;{!unitFormatHelpText}&lt;/p&gt;</helpText>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Status</name>
+            <choiceReferences>stagePicklist</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <stringValue>Vacant</stringValue>
+            </defaultValue>
+            <fieldText>Status</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Unit</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>AdditionalFieldsJSON</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{
+&quot;Status__c&quot;:&quot;{!Status}&quot;
+}</text>
+    </textTemplates>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>unitFormatHelpText</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Enter the format for unit names. Use {i} as a placeholder for the unit index. For example, entering &apos;Unit {i}&apos; will generate unit names like &apos;Unit 1&apos;, &apos;Unit 2&apos;, etc.</stringValue>
+        </value>
+    </variables>
+</Flow>

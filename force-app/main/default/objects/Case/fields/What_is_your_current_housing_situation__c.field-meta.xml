@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_is_your_current_housing_situation__c</fullName>
+    <label>What is your current housing situation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Homeless</fullName>
+                <default>false</default>
+                <label>Homeless</label>
+            </value>
+            <value>
+                <fullName>Shelter</fullName>
+                <default>false</default>
+                <label>Shelter</label>
+            </value>
+            <value>
+                <fullName>Encampment</fullName>
+                <default>false</default>
+                <label>Encampment</label>
+            </value>
+            <value>
+                <fullName>Couch Surfing</fullName>
+                <default>false</default>
+                <label>Couch Surfing</label>
+            </value>
+            <value>
+                <fullName>Living with Friend</fullName>
+                <default>false</default>
+                <label>Living with Friend</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

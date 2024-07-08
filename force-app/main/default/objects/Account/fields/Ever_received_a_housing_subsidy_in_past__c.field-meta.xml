@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ever_received_a_housing_subsidy_in_past__c</fullName>
+    <description>Have you ever received a housing subsidy in the past?</description>
+    <externalId>false</externalId>
+    <label>Ever received a housing subsidy in past</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

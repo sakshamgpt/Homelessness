@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Units</value>
+    </caseValues>
+    <layouts>
+        <layout>Homeless_Unit_Page_Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Unit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- This record type specifies the homelessness --></description>
+        <label><!-- Homelessness --></label>
+        <name>Homelessness</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This record type specifies the housing --></description>
+        <label><!-- Housing --></label>
+        <name>Housing</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

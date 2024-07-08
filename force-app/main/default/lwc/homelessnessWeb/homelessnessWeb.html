@@ -1,0 +1,24 @@
+<template>
+	
+	<div class="web-container">
+		<div class="branch branch-care-plan" data-info={carePlanInfo}>
+			<h2 class="branch-title">Care Plans</h2>
+			<a class="slds-button slds-button_brand" onclick={handleCreateCarePlan}>Create a Care Plan</a>
+			<!-- Sub-component for Homelessness Care Plan -->
+			<c-homelessness-care-plan></c-homelessness-care-plan>
+		</div>
+		<div class="branch branch-benefits" data-info={benefitsInfo}>
+			<h2 class="branch-title">Benefits</h2>
+			<a class="slds-button slds-button_brand" onclick={handleCreateBenefit}>Assign Benefits</a>
+			<!-- Sub-component for Homelessness Benefits -->
+			<c-homelessness-benefits></c-homelessness-benefits>
+		</div>
+		<div class="branch branch-goals" data-info={goalsInfo}>
+			<h2 class="branch-title">Goals</h2>
+			<a class="slds-button slds-button_brand" onclick={handleCreateGoal}>Set Goals</a>
+			<!-- Sub-component for Homelessness Goals -->
+			<c-homelessness-goals></c-homelessness-goals>
+		</div>
+		<div class="line"></div>
+	</div>
+</template>

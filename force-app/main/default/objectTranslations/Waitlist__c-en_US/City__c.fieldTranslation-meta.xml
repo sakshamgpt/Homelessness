@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- City --></label>
+    <name>City__c</name>
+    <picklistValues>
+        <masterLabel>ABBOTSFORD</masterLabel>
+        <translation><!-- ABBOTSFORD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BANFF</masterLabel>
+        <translation><!-- BANFF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRAMPTON</masterLabel>
+        <translation><!-- BRAMPTON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRYAN</masterLabel>
+        <translation><!-- BRYAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BURNABY</masterLabel>
+        <translation><!-- BURNABY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CALEDON</masterLabel>
+        <translation><!-- CALEDON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOUSTON</masterLabel>
+        <translation><!-- HOUSTON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KELOWNA</masterLabel>
+        <translation><!-- KELOWNA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LANGLEY</masterLabel>
+        <translation><!-- LANGLEY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MISSISSAUGA</masterLabel>
+        <translation><!-- MISSISSAUGA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROSENBERG</masterLabel>
+        <translation><!-- ROSENBERG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SURREY</masterLabel>
+        <translation><!-- SURREY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VANCOUVER</masterLabel>
+        <translation><!-- VANCOUVER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VICTORIA</masterLabel>
+        <translation><!-- VICTORIA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

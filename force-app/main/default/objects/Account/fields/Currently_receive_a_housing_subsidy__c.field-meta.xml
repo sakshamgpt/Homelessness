@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currently_receive_a_housing_subsidy__c</fullName>
+    <description>Do you currently receive a housing subsidy?</description>
+    <externalId>false</externalId>
+    <label>Currently receive a housing subsidy ?</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

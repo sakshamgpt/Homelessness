@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Spouse</fullName>
+        <default>false</default>
+        <label>Spouse</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dependant</fullName>
+        <default>false</default>
+        <label>Dependant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dependant Adult</fullName>
+        <default>false</default>
+        <label>Dependant Adult</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Primary</fullName>
+        <default>false</default>
+        <label>Primary</label>
+    </standardValue>
+</StandardValueSet>

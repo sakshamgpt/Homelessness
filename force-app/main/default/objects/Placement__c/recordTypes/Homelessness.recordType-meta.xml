@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Homelessness</fullName>
+    <active>true</active>
+    <description>This record type specifies the homelessness</description>
+    <label>Homelessness</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed Elsewhere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Refused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tentatively Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit Transfer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Homelessness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

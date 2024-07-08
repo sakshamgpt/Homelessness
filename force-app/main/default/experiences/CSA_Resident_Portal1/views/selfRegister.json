@@ -1,0 +1,54 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "becf96ba-3af5-4e74-9a0b-31a090f67129",
+  "label" : "Self Register",
+  "regions" : [ {
+    "id" : "8d074d26-9fd4-4bfd-a0a4-b8235b203c48",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "English",
+        "subType" : "Self_Register",
+        "theme" : "lightning",
+        "type" : "HET"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "1b86844c-06be-4f8f-8fdb-42445d76f62c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5c354e36-1463-4241-a7fc-3083ebaef5ee",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "70c6e661-4820-4385-9f8e-81b3a112ff2b",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Self Register"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5bdd2fe8-6ebd-47c2-9ebb-d97e9201a181",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "419953fb-019d-491f-829f-6ecdc946a14c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-self-register"
+}

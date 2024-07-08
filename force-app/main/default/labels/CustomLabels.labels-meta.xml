@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ESRI_api_key</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ESRI api key</shortDescription>
+        <value>AAPK2e47125e9f20402c925bc0609d912683rlJQXIKxEtppdq5BIZxCcHJ0Uzmei8puMICEUu5m8ZNdXS0wW_gUu1_U7vl8rJmw</value>
+    </labels>
+    <labels>
+        <fullName>Map_Center_Coordinates</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Center Coordinates</shortDescription>
+        <value>&apos;-96.77632366441465&apos;,&apos;32.77860051747254&apos;</value>
+    </labels>
+    <labels>
+        <fullName>ResidentPortalIntakeURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ResidentPortalIntakeURL</shortDescription>
+        <value>https://cloudsynapps31--casemgtdev.sandbox.my.site.com/resident/s/housingintake?CaseNumber={!Case.Id}</value>
+    </labels>
+    <labels>
+        <fullName>SitebaseURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SitebaseURL</shortDescription>
+        <value>https://cloudsynapps31--casemgtdev.sandbox.lightning.force.com/lightning/cmp/omnistudio__vlocityLWCOmniWrapper?c__target=c:homelessnessDetailEnglish&amp;c__layout=lightning&amp;c__tabIcon=custom:custom18&amp;c__tabLabel=Homelessness Client Detail&amp;c__building=</value>
+    </labels>
+    <labels>
+        <fullName>site</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>site</shortDescription>
+        <value>&quot;https://cloudsynapps31--casemgtdev.sandbox.my.site.com/resident/s/homelessness-client-detail?building=&quot;</value>
+    </labels>
+</CustomLabels>

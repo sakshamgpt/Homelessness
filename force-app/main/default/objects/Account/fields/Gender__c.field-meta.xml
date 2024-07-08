@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gender__c</fullName>
+    <description>Client and household gender</description>
+    <label>Gender</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Male</fullName>
+                <default>false</default>
+                <label>Male</label>
+            </value>
+            <value>
+                <fullName>Female</fullName>
+                <default>false</default>
+                <label>Female</label>
+            </value>
+            <value>
+                <fullName>No Single Gender</fullName>
+                <default>false</default>
+                <label>No Single Gender</label>
+            </value>
+            <value>
+                <fullName>Questioning</fullName>
+                <default>false</default>
+                <label>Questioning</label>
+            </value>
+            <value>
+                <fullName>Transgender</fullName>
+                <default>false</default>
+                <label>Transgender</label>
+            </value>
+            <value>
+                <fullName>Client Doesn&apos;t Know/Client Refused</fullName>
+                <default>false</default>
+                <label>Client Doesn&apos;t Know/Client Refused</label>
+            </value>
+            <value>
+                <fullName>Data Not Collected</fullName>
+                <default>false</default>
+                <label>Data Not Collected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Any_additional_considerations_for_housin__c</fullName>
+    <description>Please indicate any of the following additional considerations for housing that apply to your household</description>
+    <label>Any additional consideration for housing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Wheelchair accessible unit with a roll-in shower required</fullName>
+                <default>false</default>
+                <label>Wheelchair accessible unit with a roll-in shower required</label>
+            </value>
+            <value>
+                <fullName>Wheelchair accessible unit without a roll-in shower required</fullName>
+                <default>false</default>
+                <label>Wheelchair accessible unit without a roll-in shower required</label>
+            </value>
+            <value>
+                <fullName>Others, Specify</fullName>
+                <default>false</default>
+                <label>Others, Specify</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

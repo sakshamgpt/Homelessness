@@ -1,0 +1,54 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "10085a54-c1a8-48f6-9853-97237153669d",
+  "label" : "Homelessness Client Detail",
+  "regions" : [ {
+    "id" : "625bd5b6-5e79-4f7b-97c0-59a5dde4ccc8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "dir" : "ltr",
+        "flexipageRegionWidth" : "LARGE",
+        "inline" : false,
+        "inlineLabel" : "Launch undefined/undefined",
+        "inlineVariant" : "brand",
+        "layout" : "lightning",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:homelessnessDetailEnglish",
+      "id" : "f20c802b-0ea7-4be6-b144-87f5a5b6b0c3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c2db0e68-44b7-48cc-9c63-4fae38fb45c7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "52ae57bc-30d0-4dd9-b54b-4d66b8f2aa62",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Homelessness Client Detail"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "19ba1fff-406f-41f6-85f0-44063e58b092",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0166b050-3e24-45e1-893e-a10ff554980f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-homelessness-client-detail"
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Family breakup</fullName>
+        <default>false</default>
+        <label>Family breakup</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Eviction</fullName>
+        <default>false</default>
+        <label>Eviction</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Homeless</fullName>
+        <default>false</default>
+        <label>Homeless</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "5b205053-f490-487c-8595-3dccb5fe87e2",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "MyUnits__c",
+  "id" : "5a29cbc6-0538-4857-a707-ac422d1b58c8",
+  "label" : "My Units",
+  "pageAccess" : "RequiresLogin",
+  "routeType" : "custom-my-units",
+  "type" : "route",
+  "urlPrefix" : "my-units"
+}

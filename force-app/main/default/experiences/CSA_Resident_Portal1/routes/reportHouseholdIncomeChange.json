@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "9018d1ce-3cff-49dd-ba24-8483ac9e0745",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "Report_Household_Income_Change__c",
+  "id" : "0dc52bd9-2e30-4a85-bb6b-737d25c783ce",
+  "label" : "Report Household Income Change",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-report-household-income-change",
+  "type" : "route",
+  "urlPrefix" : "report-household-income-change"
+}

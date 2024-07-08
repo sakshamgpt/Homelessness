@@ -1,0 +1,466 @@
+<apex:page controller="FacilitiesMapControllerInternal" lightningStylesheets="true" docType="html-5.0" showHeader="false" sidebar="false" >
+    <html>
+        
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+            <title>Shelter Facilities</title>
+            
+            <style>
+                
+                .header{
+                margin : 0.75rem;
+                margin-top: 0;
+                }
+                
+                .locate-btn {
+                position: absolute;
+                bottom: 70px;
+                right: 20px;
+                background: #fff;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                z-index: 10;
+                transition: background 0.3s, transform 0.3s;
+                
+                }
+                
+                .locate-btn:hover {
+                background: #f1f1f1;
+                }
+                
+                .locate-btn.accepted {
+                animation: pulse 2s infinite;
+                }
+                
+                .locate-btn svg {
+                width: 40px;
+                height: 40px;
+                }
+                
+                @keyframes pulse {
+                0% {
+                transform: scale(1);
+                }
+                50% {
+                transform: scale(1.1);
+                }
+                100% {
+                transform: scale(1);
+                }
+                }
+                
+                .hover-box {
+                position: absolute;
+                bottom: 140px;
+                right: 20px;
+                background: #fff;
+                padding: 8px;
+                border-radius: 4px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                z-index: 10;
+                display: none;
+                font-size: 14px;
+                color: #333;
+                }
+                
+                body{
+                	padding:0 !important;
+                }
+                
+                body,
+                html,
+                #viewDiv {
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                height: 100%;
+                }
+                html .brandQuaternaryBgr{
+                Background-color:transparent !important;
+                overflow-x: hidden !important;
+                }
+                p {text-align: center;
+                font-size: 1.2rem;}
+            </style>
+            
+            <apex:stylesheet value="{!URLFOR($Resource.ESRIINIT, '/esri/themes/light/main.css')}"/>
+            
+            <apex:includeScript loadOnReady="true" value="{!URLFOR($Resource.ESRIINIT, '/init2.js')}"/>
+            
+            
+            <script>
+            
+            let locateButton;
+            let hoverBox;
+            
+            let disableLocationTxt = 'Show your location'; 
+            let enableLocationTxt = 'Getting your location';
+            
+            let userCoordinates;
+            let userLocationGraphic;
+            let userLocationGraphicsLayer;
+            let deniedInnerHtml = `
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="location-icon">
+                <circle cx="12" cy="12" r="10" fill="#808080" opacity="0.6"></circle>
+                <circle cx="12" cy="12" r="6" fill="#FFFFFF" opacity="0.6"></circle>
+                </svg>
+                `;
+            
+            let acceptedInnerHtml =  `
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="location-icon">
+                <circle cx="12" cy="12" r="10" fill="#4285f4" opacity="0.6">
+                    <animate attributeName="opacity" values="0.6; 0.1; 0.6" dur="1.8s" repeatCount="indefinite" />
+                        </circle>
+                    <circle cx="12" cy="12" r="6" fill="#4285f4" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6; 0.1; 0.6" dur="1.8s" begin="0.6s" repeatCount="indefinite" />
+                            </circle>
+                        <circle cx="12" cy="12" r="2" fill="#4285f4" opacity="0.6">
+                            <animate attributeName="opacity" values="0.6; 0.1; 0.6" dur="1.8s" begin="1.2s" repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+                            `;                 
+            window.onload = function loadCoordinates(){
+                locateButton = document.createElement('div');
+                hoverBox = document.createElement('div');
+                locateButton.className = 'locate-btn denied'; // Default to denied state
+                
+                
+                locateButton.innerHTML = deniedInnerHtml;
+                
+                hoverBox.className = 'hover-box';
+                
+                hoverBox.textContent = disableLocationTxt; // Default to denied state message
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        // Use user's location
+                        userCoordinates = [position.coords.longitude.toString(), position.coords.latitude.toString()];
+                        console.log('userCoordinates-->',userCoordinates);
+                        loadMaps(userCoordinates, true);
+                        
+                        locateButton.classList.remove('denied');
+                        locateButton.classList.add('accepted');
+                        locateButton.innerHTML = acceptedInnerHtml;	
+                        hoverBox.textContent = enableLocationTxt;
+                        
+                    }, function (error) {
+                        // If user denies permission, use default coordinates
+                        console.warn('ERROR(' + error.code + '): ' + error.message);
+                        userCoordinates = [{!$Label.Map_Center_Coordinates}];
+                        
+                        loadMaps(userCoordinates, false);
+                        //createMapView(defaultCoordinates);
+                        locateButton.classList.add('denied');
+                        locateButton.classList.remove('accepted');
+                        locateButton.innerHTML = deniedInnerHtml;
+                        hoverBox.textContent = disableLocationTxt;
+                    });
+                } else {
+                    // Browser doesn't support Geolocation, use default coordinates
+                    userCoordinates = [{!$Label.Map_Center_Coordinates}];
+                    //createMapView(defaultCoordinates);
+                    
+                    loadMaps(userCoordinates, false);
+                    locateButton.classList.add('denied');
+                    locateButton.classList.remove('accepted');
+                    locateButton.innerHTML = deniedInnerHtml;
+                    hoverBox.textContent = disableLocationTxt;
+                }
+                locateButton.onmouseover = function() {
+                    hoverBox.style.display = 'block';
+                };
+                
+                locateButton.onmouseout = function() {
+                    hoverBox.style.display = 'none';
+                };
+                
+                
+            }
+            
+            function loadMaps(userCoordinates, isUserLocation){
+                // Add the "Go to My Location" button
+                
+                
+                
+                
+                
+                var locations = '{!JSENCODE(allOtherPermitLocations)}';
+                
+                var geocodes = JSON.parse(locations);
+                
+                require(["esri/config", "esri/Map", "esri/views/MapView", "esri/widgets/Search", "esri/Graphic","esri/symbols/SimpleMarkerSymbol",
+                         "esri/layers/GraphicsLayer", "esri/geometry/Multipoint","esri/geometry/Point","esri/layers/GroupLayer","esri/widgets/LayerList","esri/widgets/Expand","esri/widgets/Popup"],
+                        function (esriConfig, Map, MapView, Search, Graphic,SimpleMarkerSymbol, GraphicsLayer, Multipoint,Point,GroupLayer,LayerList,Expand,Popup) {
+                            
+                            esriConfig.apiKey = '{!$Label.ESRI_api_key}'; // Ensure this is enclosed in quotes
+                            
+                            
+                            
+                            const map = new Map({
+                                basemap: "arcgis-navigation" // Basemap layer service
+                            });
+                            
+                            // Navigator
+                            
+                            
+                            const view = new MapView({
+                                map: map,
+                                center: userCoordinates, // Longitude, latitude
+                                zoom: 4, // Zoom level 
+                                container: "viewDiv" // Div element
+                            });
+                            
+                            
+                            
+                            
+                            // Initialize the graphics layer for user location
+                            userLocationGraphicsLayer = new GraphicsLayer({
+                                title: "My Location",
+                            });
+                            map.add(userLocationGraphicsLayer);
+                            
+                            
+                            // Add user location marker if isUserLocation is true
+                            if (isUserLocation) {
+                                
+                                // Create a blue dot symbol for the current user location
+                                const userLocationSymbol = new SimpleMarkerSymbol({
+                                    color: [66, 133, 244], // Blue color
+                                    size: 8,
+                                    outline: {
+                                        color: [255, 255, 255], // Black outline
+                                        width: 1
+                                    }
+                                });
+                                
+                                // Graphic representing the current user's location
+                                userLocationGraphic = new Graphic({
+                                    geometry: new Point({
+                                        longitude: userCoordinates[0],
+                                        latitude: userCoordinates[1]
+                                    }),
+                                    symbol: userLocationSymbol
+                                });
+                                
+                                // Graphics layer for the user location
+                                
+                                userLocationGraphicsLayer.add(userLocationGraphic);
+                                
+                                
+                            }
+                            
+                            const searchWidget = new Search({
+                                view: view
+                            });
+                            // Adds the search widget below other elements in
+                            // the top right corner of the view
+                            view.ui.add(searchWidget, {
+                                position: "top-right",
+                                index: 2
+                            });
+                            let layerList = new LayerList({
+                                view: view
+                                
+                            });
+                            const bgExpand = new Expand({
+                                view: view,
+                                content: layerList
+                            });
+                            view.ui.add(bgExpand, {
+                                position: "top-left"
+                            });
+                            
+                            
+                            locateButton.onclick = function() {
+                                if (navigator.geolocation) {
+                                    
+                                    navigator.geolocation.getCurrentPosition(function(position) {
+                                        userCoordinates = [position.coords.longitude, position.coords.latitude];
+                                        view.goTo({
+                                            center: userCoordinates,
+                                            zoom: 14
+                                        });
+                                        
+                                        if (userLocationGraphic) {
+                                            console.log('in userLocationGraphic -->',userLocationGraphic);
+                                            console.log(userLocationGraphicsLayer);
+                                            userLocationGraphicsLayer.remove(userLocationGraphic);
+                                            console.log('line 315');
+                                        }
+                                        
+                                        userLocationGraphic = new Graphic({
+                                            geometry: new Point({
+                                                longitude: userCoordinates[0],
+                                                latitude: userCoordinates[1]
+                                            }),
+                                            symbol: new SimpleMarkerSymbol({
+                                                color: [66, 133, 244],
+                                                size: 8,
+                                                outline: {
+                                                    color: [255, 255, 255],
+                                                    width: 1
+                                                }
+                                            })
+                                        });
+                                        
+                                        userLocationGraphicsLayer.add(userLocationGraphic);
+                                        
+                                        locateButton.classList.remove('denied');
+                                        locateButton.classList.add('accepted');  
+                                        locateButton.innerHTML = acceptedInnerHtml;	
+                                        hoverBox.textContent = enableLocationTxt;
+                                        
+                                        
+                                    }, function(error) {
+                                        console.warn('ERROR(' + error.code + '): ' + error.message);
+                                        
+                                        locateButton.classList.remove('accepted');
+                                        locateButton.classList.add('denied');
+                                        locateButton.innerHTML = deniedInnerHtml;	
+                                        hoverBox.textContent = disableLocationTxt;
+                                    });
+                                } else {
+                                    locateButton.classList.remove('accepted');
+                                    locateButton.classList.add('denied');
+                                    locateButton.innerHTML = deniedInnerHtml;
+                                    hoverBox.textContent = disableLocationTxt;
+                                }
+                            };
+                            
+                            view.ui.add(locateButton);
+                            view.ui.add(hoverBox);
+                            
+                            
+                            var otherLocations = '{!JSENCODE(IF(allOtherPermitLocations != null, allOtherPermitLocations, ""))}';
+                            console.log('otherLocations: ' + otherLocations);
+                            var allOtherLocations = JSON.parse(otherLocations);
+                            var Services = '{!allOtherServices}';
+                            var AllServices = JSON.parse(Services);
+                            searchWidget.on("search-clear", function (event) {
+                                view.goTo({
+                                    center: [{!$Label.Map_Center_Coordinates}]
+                                })
+                            });
+                            const groupLayer = new GroupLayer({ title: "Shelter Facilities" });
+                            const allfacilitiesGraphicsLayer = new GraphicsLayer({
+                                title: "Shelter Facilities",
+                            });
+                            
+                            
+                            searchWidget.on("search-clear", function (event) {
+                                view.goTo({
+                                    center: [allOtherLocations.longitude, allOtherLocations.latitute]
+                                })
+                            });
+                            
+                            let Newlay = AllServices;
+                            console.log('All the services are'+JSON.stringify(Newlay));
+                            let layers = [];
+                            for (let Newl of Newlay) {
+                                layers.push(new GraphicsLayer({ title: Newl }));
+                                
+                            }
+                            console.log('Layers are'+ layers);
+                            
+                            for (var i = 0; i < allOtherLocations.length; i++) {
+                                
+                                for(let lay of layers)
+                                {
+                                    
+                                    if (allOtherLocations[i].Name != null && allOtherLocations[i].latitute != null && allOtherLocations[i].longitude != null ){
+                                        var marker = allOtherLocations[i];
+                                        const locationPoint = {
+                                            type: "point",  // autocasts as new Point()
+                                            longitude: JSON.stringify(marker.longitude),
+                                            latitude: JSON.stringify(marker.latitute)
+                                            
+                                        };
+                                        console.log('marker'+JSON.stringify(marker));
+                                        var Service_Name;
+                                        //   Service_Name = {!$Label.site}+marker.View   
+                                        Service_Name = marker.baseURL+marker.View   
+                                        VacantBeds = marker.VacantBeds;
+                                        
+                                        const locationAttributes = {
+                                            Name: marker.Name,
+                                            ServiceType:'Building',
+                                            VacantBeds:VacantBeds,
+                                            View: Service_Name 
+                                            
+                                        };
+                                        
+                                        const fields = [
+                                                        {
+                                                            "fieldName": "Name",
+                                                            "label": "Name"
+                                                        },
+                                                        {
+                                                            "fieldName": "VacantBeds",
+                                                            "label": "Vacant Beds"
+                                                        }
+                                                    ];
+                                        
+                                         if (allOtherLocations[i].VacantBeds > 0) {
+                                                fields.push({
+                                                    "fieldName": "View",
+                                                    "label": "Register"
+                                                });
+                                            }
+                                        
+                                        const locationPopupPermits = {
+                                            title:'Building',
+                                            "content": [{
+                                                "type": "fields",
+                                                "fieldInfos": fields
+                                            }]
+                                        }
+                                        const simpleMarkerSymbol = {
+                                            type: "simple-marker",
+                                            color: marker.Color,  // Ocean Blue
+                                            size: 8,
+                                            outline: {
+                                                color: 'rgb(0,0,0)', // Black
+                                                width: 1
+                                            }
+                                        };
+                                        const locationPointGraphic = new Graphic({
+                                            geometry: locationPoint,
+                                            symbol: simpleMarkerSymbol,
+                                            attributes: locationAttributes,
+                                            popupTemplate: locationPopupPermits
+                                        });
+                                        console.log('locationPointGraphic-->',JSON.stringify(locationPointGraphic));
+                                        lay.add(locationPointGraphic);
+                                        groupLayer.add(lay);	
+                                        map.add(groupLayer);
+                                    }
+                                    
+                                    
+                                }
+                            } 
+                        });
+                
+            }
+            
+            
+            </script>
+            
+        </head>
+        
+        <body>
+            <p class="header">{!shelterFacilitiesHeader}</p>
+            <div id="viewDiv"></div>
+            
+            
+        </body>
+        
+    </html>
+    
+</apex:page>

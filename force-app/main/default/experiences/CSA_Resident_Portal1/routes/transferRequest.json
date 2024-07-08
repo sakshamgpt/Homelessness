@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "2e55ea0e-1a49-45b5-82cc-e7bdec0dc0ae",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "Transfer_Request__c",
+  "id" : "1d3ce300-c975-4072-918b-f1bb781822f0",
+  "label" : "Transfer Request",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-transfer-request",
+  "type" : "route",
+  "urlPrefix" : "transfer-request"
+}

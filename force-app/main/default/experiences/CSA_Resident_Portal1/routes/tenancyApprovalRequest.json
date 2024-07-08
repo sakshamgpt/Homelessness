@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "336355e7-927f-4470-b515-fc29953b0d89",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "TenancyApprovalRequest__c",
+  "id" : "25a4df50-399d-421a-8345-2fc2a51bad09",
+  "label" : "Tenancy Approval Request",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-tenancy-approval-request",
+  "type" : "route",
+  "urlPrefix" : "tenancy-approval-request-"
+}

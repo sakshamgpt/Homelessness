@@ -1,0 +1,177 @@
+<template>
+    <div class="homelessness-management">
+        <div class="header">
+            <h2 class="slds-text-heading_small heading">Onboarding Buildings for Shelter</h2>
+        </div>
+        <template if:true={showForm}>
+            <section role="dialog" aria-labelledby="modal-heading-01" tabindex="-1"
+                class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Header -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeForm}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_small">Create Buildings and Units</h2>
+                    </header>
+                    <!-- Modal/Popup Body -->
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <template if:true={showSpinner}>
+                            <lightning-spinner alternative-text="Loading" variant="brand" size="medium"></lightning-spinner>
+                        </template>
+                        <template if:false={showSpinner}>
+                            <template if:true={showSelection}>
+                                <lightning-radio-group name="buildingOptions" required class="radioGroup"
+                                    label="Do you want to create a new building or add units to an existing building?"
+                                    options={buildingOptions} value={selectedOption} onchange={handleOptionChange}>
+                                </lightning-radio-group>
+                                
+                                
+                            
+                              
+                            </template>
+                            <template if:true={showBuildingForm}>
+                                <lightning-record-edit-form object-api-name="Building__c">
+                                    <template for:each={buildingFields} for:item="field" for:index="index">
+                                        <lightning-input-field data-index={index} key={field.apiName}
+                                            value={field.value} data-field={field.apiName} field-name={field.apiName} 
+                                            onchange={handleInputChange} required={field.required} onfocusout={handleInputVerify}>
+                                        </lightning-input-field>
+                                        <div  key={field.apiName}  lwc-enmikoh2qu="" style="color:var(--slds-g-color-error-base-40, var(--lwc-colorTextError,rgb(234, 0, 30)))" class={field.apiName} data-help-message="" part="help-text" role="status" bis_skin_checked="1">{field.error}</div>
+                                    </template>
+                                </lightning-record-edit-form>
+                            </template>
+                            <template if:true={showUnitForm}>
+                                <lightning-input type="checkbox" class="unitCheckbox" label="Assign Units to Your Building" name="addUnits"
+                                    checked={addUnits} disabled={isCheckboxDisabled} onchange={handleAddUnitsChange}></lightning-input>
+                                <template if:true={addUnits}>
+                                    <lightning-input required label="Number of Units" data-field="numUnits" type="number"
+                                        name="numUnits" onchange={handleInputChange} class="numberUnit" onfocusout={handleInputVerify}></lightning-input>
+                                        <template if:true={countUnit}>
+                                         <div  lwc-enmikoh2qu="" style="color:var(--slds-g-color-error-base-40, var(--lwc-colorTextError,rgb(234, 0, 30)))" class="" data-help-message="" part="help-text" role="status" bis_skin_checked="1">The number of units should be less than 10000</div>
+                                        </template>
+                                    <div style="display:flex">
+                                        <lightning-input label="Unit Name Format" data-field="unitNameFormat"
+                                            type="text" name="unitNameFormat"  onchange={handleInputChange}>
+                                        </lightning-input>
+                                        <div class="slds-form-element">
+                                            <lightning-helptext
+                                                content="Enter the format for unit names. Use {i} as a placeholder for the unit index. For example, entering 'Unit {i}' will generate unit names like 'Unit 1', 'Unit 2', etc.">
+                                            </lightning-helptext>
+                                        </div>
+                                    </div>
+                                </template>
+                            </template>
+                            <!-- Code for lookup  -->
+                            <!-- for empty lookup field and search list: -->
+                            <template if:true={showEmptyLookup}>
+                                <!-- <input type="text" onkeyup = {checkKeyUp}> input</input> -->
+                                    <h2 class="slds-m-bottom--small"> Select Building </h2>
+                                <div data-key="searchdiv"
+                                    class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                                    role="none">
+                                    <template if:true={lookupSpinner}>
+                                        <lightning-spinner alternative-text="Loading" variant="brand" size="small">
+                                        </lightning-spinner>
+                                    </template>
+                                    <input type="text" onfocusin={onFocus} onfocusout={onLeave} value={searchKey} onkeyup={handleKeyChange}  onchange={handleKeyChange} class="slds-input slds-combobox__input slds-has-focus" id="combobox-id-2" aria-autocomplete="list" aria-controls="listbox-id-2" role="textbox" placeholder="Search..." />
+                                               <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                                        <lightning-icon icon-name="utility:search" size="xx-Small" class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true"></lightning-icon>
+                                    </span>
+                                </div>
+                                <template if:true={recordsList}>
+                                    <div id="listbox-id-2-venu" data-key="dropdownresult"
+                                        class="slds-show slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid recordsList"
+                                        role="listbox">
+                                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                            <template if:true={message}>
+                                                <center> {message}</center>
+                                            </template>
+                                            <template for:each={recordsList} for:item="record">
+                                                <li id={record.Id} key={record.Id} onclick={onRecordSelection}
+                                                    role="presentation" class="slds-listbox__item">
+                                                    <div data-key={record.Id} data-name={record.Name}
+                                                        class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                                        role="option">
+                                                        <span class="slds-media__figure slds-listbox__option-icon">
+                                                            <span class="slds-icon_container">
+                                                                <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+                                                            </span>
+                                                        </span>
+                                                        <span class="slds-media__body">
+                                                        <span data-key={record.Id} data-name={record.Name} class="slds-listbox__option-text slds-listbox__option-text_entity">{record.Name} </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </template>
+                                        </ul>
+                                    </div>
+                                </template>
+                            </template>
+                            <!-- to display the selected account in the lookup field -->
+                            <template if:true={showLookup}>
+                                    <h2 class="slds-m-bottom--small"> Select Building </h2>
+                                <div data-key="pilldiv"
+                                    class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
+                                    role="none">
+                                    <span class="slds-icon_container slds-icon-standard-account slds-combobox__input-entity-icon" title="object">
+                                        <div class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+                                        </div>
+                                        <span class="slds-assistive-text">Record</span>
+                                    </span>
+                                    
+                                    <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="combobox-id-5" aria-controls="listbox-id-5" role="combobox" placeholder="Select an Option" readonly value={selectedValue} />
+                                    <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" onclick={removeRecordOnLookup}
+                                        title="Remove selected option">
+                                        <span class="slds-button__icon" aria-hidden="true" >
+                                            <lightning-icon icon-name="utility:close"  
+                                                size="xx-Small" class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true"></lightning-icon>
+                                        </span>
+                                        <span class="slds-assistive-text">Remove selected option</span>  
+                                    </button>
+                                </div>
+                            </template>
+                            <!-- lookup code ends here  -->
+                        </template>
+                    </div>
+                    <!-- Modal/Popup Footer -->
+                    <footer class="slds-modal__footer">
+                        <template if:true={showSelection}>
+                            <lightning-button variant="neutral" label="Cancel" onclick={closeForm}></lightning-button>
+                            <lightning-button variant="brand" label="Next" onclick={handleSelectionNext}>
+                            </lightning-button>
+                        </template>
+                        <template if:true={showBuildingForm}>
+                            <lightning-button variant="neutral" label="Previous" onclick={handlePrevious}>
+                            </lightning-button>
+                            <lightning-button variant="brand" label="Next" onclick={handleNext}></lightning-button>
+                        </template>
+                        <template if:true={showUnitForm}>
+                            <lightning-button data-value={buttonValue} variant="brand" label="Previous" onclick={handlePrevious}>
+                            </lightning-button>
+                            <lightning-button data-value={buttonValue} variant="brand" label="Submit" onclick={handleAddUnits}>
+                            </lightning-button>
+                        </template>
+                        <template if:true={showEmptyLookup}>
+                            <lightning-button variant="neutral" label="Previous" onclick={handlePrevious}>
+                            </lightning-button>
+                            <!-- <lightning-button variant="brand" label="Next" onclick={handleNext}></lightning-button> -->
+                        </template>
+                        <template if:true={showLookup}>
+                            <lightning-button variant="brand" label="Previous" onclick={handlePrevious}>
+                            </lightning-button>
+                            <lightning-button data-value="lookup" variant="brand" label="Next" onclick={handleNext}>
+                            </lightning-button>
+                        </template>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+        <div class="get-started-button">
+            <lightning-button label="Get Started" onclick={openForm} variant="brand"></lightning-button>
+        </div>
+    </div>
+</template>

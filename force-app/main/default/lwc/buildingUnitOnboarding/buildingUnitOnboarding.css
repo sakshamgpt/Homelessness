@@ -1,0 +1,96 @@
+:host {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.radioGroupError{
+    --slds-c-radio-color-border : #ba0517;
+    border-width : 2px;
+
+
+}
+.radioGroupError .slds-radio_faux{
+
+    
+    border-width: 2px;
+}
+
+.homelessness-management {
+    background-color: #f4f6f9; /* Light background color */
+    padding: 1rem; /* Add consistent padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add box shadow */
+}
+
+.header {
+   
+    padding: 0.5rem 1rem; /* Adjusted padding */
+    
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    align-items: center;
+    justify-content: center;
+}
+
+input[readonly], [role=textbox], input[readonly][role=combobox]{
+    border-color: var(--slds-g-color-border-base-4, var(--lwc-colorBorderInput, rgb(201, 201, 201)));
+    background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput, rgb(255, 255, 255)));
+    font-size: inherit;
+    font-weight: var(--lwc-fontWeightRegular, 400);
+}
+
+
+
+.header h2 {
+    
+    font-weight: bold;
+    margin: 0;
+}
+
+.slds-modal__container {
+    border-radius: 0.25rem; /* Add border radius */
+    overflow: hidden; /* Ensure content overflow is hidden */
+}
+
+.slds-modal__content {
+    background-color: #ffffff; /* White background */
+    padding: 1rem;
+}
+
+.slds-modal__footer {
+    justify-content: flex-end;
+    padding: 1rem; /* Add padding to footer */
+}
+
+.slds-modal__footer lightning-button {
+    margin-left: 0.5rem; /* Adjust spacing between buttons */
+}
+
+.get-started-button {
+    margin-top: 0.5rem; /* Add top margin to separate from the header */
+    display: flex;
+    justify-content: center;
+}
+
+.heading{
+    
+    font-size: 12pt;
+    font-weight: var(--lwc-fontWeightBold,700);
+    font-family: sans-serif;
+    color: var(--slds-g-color-neutral-base-10, var(--lwc-colorTextDefault,rgb(24, 24, 24)));
+
+}
+
+.recordsList{
+    /* position: relative; */
+}
+
+
+.slds-has-error{
+    --slds-c-input-color-border: var(--slds-g-color-error-base-40, var(--lwc-colorBorderError, rgb(234, 0, 30)));
+    --slds-c-input-shadow: var(--slds-g-color-error-base-40, var(--lwc-colorBorderError, rgb(234, 0, 30))) 0 0 0 var(--lwc-borderWidthThin, 1px) inset;
+    --slds-c-input-color-background: var(--sds-c-input-color-background, var(--sds-c-input-color-background, var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput, rgb(255, 255, 255)))));
+    --slds-c-input-text-color: var(--slds-c-input-text-color, var(--sds-c-input-text-color));
+    background-clip: padding-box;
+
+}

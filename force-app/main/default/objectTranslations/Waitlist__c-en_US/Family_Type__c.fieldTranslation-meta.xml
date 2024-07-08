@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Family Type --></label>
+    <name>Family_Type__c</name>
+    <picklistValues>
+        <masterLabel>Family</masterLabel>
+        <translation><!-- Family --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior</masterLabel>
+        <translation><!-- Senior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single</masterLabel>
+        <translation><!-- Single --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

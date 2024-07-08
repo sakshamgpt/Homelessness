@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Homelessness: New Member Welcome Email</name>
+    <style>none</style>
+    <subject>Welcome to {!Community_Name}</subject>
+    <textOnly>Welcome to the {!Community_Name}
+
+Dear {!Receiving_User.FirstName},
+
+Thank you for joining our {!Community_Name}. Our community is dedicated to providing you with the assistance and resources you need.
+
+To get started, please visit the following link:
+
+Access the Portal : {!Community_Url}
+
+Your username is: {!Receiving_User.Username}
+
+If you have any questions or require further assistance, do not hesitate to contact us.
+
+Best regards,
+
+{!Organization.Name}
+
+© {!Year} {!Organization.Name}. All rights reserved.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

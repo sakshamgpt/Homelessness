@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Immigration_Status__c</fullName>
+    <label>Immigration Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Citizen</fullName>
+                <default>false</default>
+                <label>Citizen</label>
+            </value>
+            <value>
+                <fullName>Work Visa</fullName>
+                <default>false</default>
+                <label>Work Visa</label>
+            </value>
+            <value>
+                <fullName>Green Card Holder</fullName>
+                <default>false</default>
+                <label>Green Card Holder</label>
+            </value>
+            <value>
+                <fullName>Applicant for Permanent Residence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Applicant for Permanent Residence</label>
+            </value>
+            <value>
+                <fullName>Canadian Citizen</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Canadian Citizen</label>
+            </value>
+            <value>
+                <fullName>Do not know</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Do not know</label>
+            </value>
+            <value>
+                <fullName>No Status/Visitor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Status/Visitor</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Permanent Resident/Landed Immigrant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Permanent Resident/Landed Immigrant</label>
+            </value>
+            <value>
+                <fullName>Refugee Claimant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Refugee Claimant</label>
+            </value>
+            <value>
+                <fullName>Refugee/Protected Person</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Refugee/Protected Person</label>
+            </value>
+            <value>
+                <fullName>Sponsored</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sponsored</label>
+            </value>
+            <value>
+                <fullName>Temporary Resident Employment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Temporary Resident Employment</label>
+            </value>
+            <value>
+                <fullName>Temporary Resident Student</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Temporary Resident Student</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

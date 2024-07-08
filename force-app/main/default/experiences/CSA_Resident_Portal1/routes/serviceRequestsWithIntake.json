@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "a4372760-f13d-42e3-9f2d-fdcf292e4622",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "ServiceRequestsWithIntake__c",
+  "id" : "6aa9f504-c7e9-41c4-93ec-3bca8f6382bc",
+  "label" : "Service Requests With Intake",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-service-requests-with-intake",
+  "type" : "route",
+  "urlPrefix" : "service-requests-with-intake"
+}

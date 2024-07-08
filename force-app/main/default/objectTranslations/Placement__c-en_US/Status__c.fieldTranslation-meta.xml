@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Discharge</masterLabel>
+        <translation><!-- Discharge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open Request</masterLabel>
+        <translation><!-- Open Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placed Elsewhere</masterLabel>
+        <translation><!-- Placed Elsewhere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placement Active</masterLabel>
+        <translation><!-- Placement Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placement Inactive</masterLabel>
+        <translation><!-- Placement Inactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Placement Pending</masterLabel>
+        <translation><!-- Placement Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request Aborted</masterLabel>
+        <translation><!-- Request Aborted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request Refused</masterLabel>
+        <translation><!-- Request Refused --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tentatively Accepted</masterLabel>
+        <translation><!-- Tentatively Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit Transfer</masterLabel>
+        <translation><!-- Unit Transfer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

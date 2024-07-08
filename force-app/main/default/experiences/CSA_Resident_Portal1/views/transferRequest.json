@@ -1,0 +1,54 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "2e55ea0e-1a49-45b5-82cc-e7bdec0dc0ae",
+  "label" : "Transfer Request",
+  "regions" : [ {
+    "id" : "96df453a-97c9-4f74-8a13-085e4a7cdffc",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "English",
+        "subType" : "HousingTransferRequests",
+        "theme" : "lightning",
+        "type" : "CSA"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "56a73932-c949-4e17-a4d8-a13de356333f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "81f4f6d9-0719-4526-9a82-99effe18ce53",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "bdf49993-0d42-4e36-ab92-dd4dd129e614",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Transfer Request"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "252941a4-93a7-4a12-8d23-71a5a5d73cc1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c40177ac-ecd5-4449-95cd-7d9c2622284a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-transfer-request"
+}

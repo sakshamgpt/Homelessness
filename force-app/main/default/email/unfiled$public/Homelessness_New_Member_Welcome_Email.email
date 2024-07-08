@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+        .container {
+            background-color: #ffffff;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            color: #ffffff;
+            text-align: center;
+           background-color: #004085; 
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #004085;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #777777;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #004085;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to the {!Community_Name}</h1>
+        </div>
+        <div class="content">          
+            <p>Dear <span class="highlight">{!Receiving_User.FirstName}</span>,</p>
+            <p>Thank you for joining our {!Community_Name}. Our community is dedicated to providing you with the assistance and resources you need.</p>
+            <p>To get started, please visit the following link:</p>
+            <p><a href="{!Community_Url}" class="button">Access the Portal</a></p>
+            <p>Your username is: <span class="highlight">{!Receiving_User.Username}</span></p>
+            <p>If you have any questions or require further assistance, do not hesitate to contact us.</p>
+            <p>Best regards,</p>
+            <p>{!Organization.Name}</p>
+        </div>
+        <div class="footer">
+            <p>&copy; {!Year} {!Organization.Name}. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Of_Race__c</fullName>
+    <label>Type Of Race</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>American Indian/Alaskan Native</fullName>
+                <default>false</default>
+                <label>American Indian/Alaskan Native</label>
+            </value>
+            <value>
+                <fullName>Asian</fullName>
+                <default>false</default>
+                <label>Asian</label>
+            </value>
+            <value>
+                <fullName>Black of African American</fullName>
+                <default>false</default>
+                <label>Black of African American</label>
+            </value>
+            <value>
+                <fullName>Native Hawalian or Other pacific Islander</fullName>
+                <default>false</default>
+                <label>Native Hawalian or Other pacific Islander</label>
+            </value>
+            <value>
+                <fullName>White</fullName>
+                <default>false</default>
+                <label>White</label>
+            </value>
+            <value>
+                <fullName>American Indian or Alaskan Native and White</fullName>
+                <default>false</default>
+                <label>American Indian or Alaskan Native and White</label>
+            </value>
+            <value>
+                <fullName>Asian and White</fullName>
+                <default>false</default>
+                <label>Asian and White</label>
+            </value>
+            <value>
+                <fullName>Black of African American and white</fullName>
+                <default>false</default>
+                <label>Black of African American and white</label>
+            </value>
+            <value>
+                <fullName>American Indian or Alaska Native and Black or African American</fullName>
+                <default>false</default>
+                <label>American Indian or Alaska Native and Black or African American</label>
+            </value>
+            <value>
+                <fullName>Other Multiple race</fullName>
+                <default>false</default>
+                <label>Other Multiple race</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Waitlist</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Waitlists</value>
+    </caseValues>
+    <layouts>
+        <layout>Waitlist Layout</layout>
+        <sections>
+            <label><!-- Additional Approved Waitlist Considerations --></label>
+            <section>Additional Approved Waitlist Considerations</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Details --></label>
+            <section>Additional Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Stage Details --></label>
+            <section>Stage Details</section>
+        </sections>
+        <sections>
+            <label><!-- Waitlist Active Status --></label>
+            <section>Waitlist Active Status</section>
+        </sections>
+        <sections>
+            <label><!-- Waitlist Preference --></label>
+            <section>Waitlist Preference</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Tenancy --></label>
+        <name>Create_Tenancy</name>
+    </webLinks>
+</CustomObjectTranslation>

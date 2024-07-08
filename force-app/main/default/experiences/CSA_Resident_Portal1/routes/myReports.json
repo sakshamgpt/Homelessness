@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "1018a486-df58-4887-af99-c8fc4d5ba104",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "My_Reports__c",
+  "id" : "0ad7265b-25a5-4d7b-8da1-bc28c600825c",
+  "label" : "My Reports",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-my-reports",
+  "type" : "route",
+  "urlPrefix" : "my-reports"
+}

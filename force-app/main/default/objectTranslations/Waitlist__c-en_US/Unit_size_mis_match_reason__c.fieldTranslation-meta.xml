@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Unit size mis-match reason --></label>
+    <name>Unit_size_mis_match_reason__c</name>
+    <picklistValues>
+        <masterLabel>Agreed to bachelor instead of 1 bedroom</masterLabel>
+        <translation><!-- Agreed to bachelor instead of 1 bedroom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agreed to one unit size smaller</masterLabel>
+        <translation><!-- Agreed to one unit size smaller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child custody arrangements</masterLabel>
+        <translation><!-- Child custody arrangements --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request extra bedroom for medical reason</masterLabel>
+        <translation><!-- Request extra bedroom for medical reason --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special circumstances, please specify</masterLabel>
+        <translation><!-- Special circumstances, please specify --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

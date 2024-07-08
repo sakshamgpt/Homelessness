@@ -1,0 +1,150 @@
+<template>
+    
+        <template if:true={isLoading}>
+            <!-- Show spinner when isLoading is true -->
+            <lightning-spinner class="slds-align--absolute-center" variant="brand" alternative-text="Loading" size="medium" style="height:100px"></lightning-spinner>
+        </template>
+    <div style="display:flex;overflow:auto">
+        <template if:true={caseTreeData}>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a class="slds-card">Case</a>
+                        <ul style="display:grid">
+                            <div>
+                                <button onclick={createRecord} data-id="CaseParticipant">Create Participants</button>
+                            </div>
+                            <ul>
+                            <div style="display:flex;    place-content: center;">
+                                <template if:true={caseTreeData.participants.length}>
+                                <template for:each={caseTreeData.participants} for:item="participant">
+
+                                    <li key={participant.Id}>
+
+
+                                        <a onclick={navigateToRecord} data-id={participant.Id} class="help-link slds-card">
+										{participant.Name}
+										<span class="tooltip">
+                                                    <p><b>Role:</b> {participant.Role}</p>
+                                                    <p><b>Status:</b> {participant.Status}</p>
+                                                </span>
+									</a>
+
+                                        <!-- <div>
+										<button onclick={createRecord} data-id="CaseParticipant">Create Record</button>
+									</div> -->
+
+
+                                        <ul style="display:grid">
+                                            <!-- <div class="help-link">
+                                                <button onclick={createRecord} data-id="CarePlan">Create Record</button>
+                                                
+                                            </div> -->
+
+                                            <template if:true={participant.careplans.length}>
+                                                <div style="display:flex;    place-content: center;">
+                                                    <template for:each={participant.careplans} for:item="carePlan">
+
+                                                        <li key={carePlan.carePlanId}>
+
+
+                                                            <a onclick={navigateToRecord} data-id={carePlan.carePlanId} class="help-link slds-card">
+                                                                {carePlan.Name}
+                                                                <span class="tooltip">
+                                                                            <p><b>Status:</b> {carePlan.Status}</p>
+                                                                            <p><b>Start Date:</b> {carePlan.StartDate}</p>
+                                                                            <p><b>End Date:</b> {carePlan.EndDate}</p>
+                                                                        </span>
+                                                            </a>
+
+                                                            <div >
+                                                                <button data-participantid={participant.AccountId} onclick={createRecord} data-id="CarePlan">Create Record</button>
+                                                            </div>
+
+                                                            <ul style="display:grid">
+                                                                <!-- <div>
+                                                                    <button onclick={createRecord} data-id="BenefitAssignment">Create Benefit</button>
+                                                                </div> -->
+                                                                <template if:true={carePlan.benefits.length}>
+                                                                    <div style="display:flex;    place-content: center;">
+                                                                        <template for:each={carePlan.benefits} for:item="benefit">
+                                                                            <li key={benefit.benefitAssignmentId}>
+
+                                                                                <a onclick={navigateToRecord} data-id={benefit.benefitAssignmentId} class="help-link slds-card">
+                                                                                {benefit.BenefitName}
+                                                                                <span class="tooltip">
+                                                                                            <p><b>Benefit Type:</b> {benefit.BenefitTypeName}</p>
+                                                                                            <p><b>Status:</b> {benefit.Status}</p>
+                                                                                        </span>
+                                                                            </a>
+
+                                                                            <div>
+                                                                                <button data-participantid={participant.AccountId} data-parent={carePlan.carePlanId} onclick={createRecord} data-id="BenefitAssignment">Create Record</button>
+                                                                            </div>
+
+                                                                            </li>
+                                                                        </template>
+                                                                    </div>
+                                                                </template>
+                                                                <template if:false={carePlan.benefits.length}>
+                                                                    <div style="display:flex">
+                                                                        <li>
+                                                                           
+                                                                                <a class="emptyData slds-card">
+                                                                                    No benefits found
+                                                                                </a>
+                                                                           
+                                                                            <div>
+                                                                                <button data-participantid={participant.AccountId} data-parent={carePlan.carePlanId} onclick={createRecord} data-id="BenefitAssignment">Create Record</button>
+                                                                            </div>
+                                                                        </li>
+                                                                    </div>
+                                                                </template>
+                                                            </ul>
+                                                        </li>
+                                                    </template>
+                                                </div>
+
+                                            </template>
+                                            <template if:false={participant.careplans.length}>
+                                                <div style="display:flex">
+                                                    <li>
+                                                        <a class="emptyData slds-card">
+                                                            No Care Plan Found
+                                                        </a>
+                                                        <div>
+                                                        <button data-participantid={participant.AccountId} onclick={createRecord} data-id="CarePlan">Create Record</button>
+                                                        </div>
+
+
+                                                    </li>
+                                                </div>
+                                            </template>
+
+                                        </ul>
+                                    </li>
+
+                                </template>
+                                </template>
+                                <template if:false={caseTreeData.participants.length}>
+                                                <div style="display:flex">
+                                                    <li>
+                                                        <a class="emptyData slds-card">
+                                                            No Participant Found
+                                                        </a>
+                                        
+
+
+                                                    </li>
+                                                </div>
+                                </template>
+                            </div>
+                            </ul>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </template>
+        
+    </div>
+</template>

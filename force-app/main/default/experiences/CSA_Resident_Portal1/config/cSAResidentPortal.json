@@ -1,0 +1,18 @@
+{
+  "forgotPasswordRouteId" : "f16eeeac-9114-4946-845b-bd0a1fb552da",
+  "isAvailableToGuests" : true,
+  "isFilteredComponentsView" : true,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "b9c069ba-0f60-4393-ad5e-bcd7ad9f7d2c",
+  "mainAppPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "438bc4a2-8ad5-482b-aa88-34ade631b709",
+  "trustedSitesForScript" : [ {
+    "id" : "81fcc6fd-71d5-4b4c-854f-745fb16f80fa",
+    "isActive" : true,
+    "trustedSiteName" : "googleMap",
+    "trustedSiteUrl" : "https://maps.googleapis.com",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

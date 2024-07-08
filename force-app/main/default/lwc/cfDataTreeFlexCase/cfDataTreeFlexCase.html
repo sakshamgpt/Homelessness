@@ -1,0 +1,173 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-m-bottom_x-small " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><c-cf-primary-member-child-card-case data-style-id="state0element0block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-primary-member-child-card-case>
+    </div><div data-style-id="state0element0block_element1" class="slds-col   slds-text-align_center slds-p-left_x-small slds-p-right_x-small  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element0block_element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element0" class="slds-col  slds-text-align_center  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-flex-img data-style-id="state0element0block_element1block_element0_child"   card={card}  record={record}  size=""  extraclass="slds-align_absolute-center"  state-img='\{"imgsrc":"/sfc/servlet.shepherd/version/download/068Dz0000020syKIAQ","alternativeText":"Image description","document":{"label":"Line branch image (3 Branches) (Version:1)","value":"/sfc/servlet.shepherd/version/download/068Dz0000020syKIAQ","title":"Line branch image (3 Branches)","Id":"068Dz0000020syKIAQ","attachmentType":"ContentVersion"}}'  theme="slds"  ></omnistudio-flex-img>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col    slds-p-around_x-small  slds-size_4-of-12  " data-rindex={rindex} style="      
+    border-radius:5px;    color:#000000; " >
+    <omnistudio-block data-style-id="state0element1block_element0_child"  card={card}  record={record}  label="Household"  collapsible="true"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0block_element0" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch1-case data-style-id="state0element1block_element0block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch1-case>
+    </div><div data-style-id="state0element1block_element0block_element1" class="slds-col  slds-border_top slds-border_bottom slds-border_left slds-border_right  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed;border-right: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch1-elements-card-case data-style-id="state0element1block_element0block_element1_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch1-elements-card-case>
+    </div><div data-style-id="state0element1block_element0block_element2" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><omnistudio-flex-action data-style-id="state0element1block_element0block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1block_element0block_element2_child flexActionElement" 
+        data-action-element-class="state0element1block_element0block_element2_child" data-action-key="state0element1block_element0block_element2" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action2"   state-obj={record}  card={card}  record={record}  label="Add Member"  icon-name="utility:add"  action-list='\[{"stateAction":{"id":"flex-action-1693571712592","type":"Custom","openUrlIn":"New Tab/Window","targetType":"Web Page","Web Page":{"targetName":"https://cloudsynapps31--casemgtdev.sandbox.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=169357173375536607"}},"key":"1693501808490-wdzjo51o6","label":"Create Member Record","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  flyout-channel="close_modal"  icon-size="x-small"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1block_element1" class="slds-col    slds-p-around_x-small  slds-size_4-of-12  " data-rindex={rindex} style="      
+    border-radius:5px;    color:#000000; " >
+    <omnistudio-block data-style-id="state0element1block_element1_child"  card={card}  record={record}  label="Care Plan"  collapsible="true"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element1block_element0" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch2-case data-style-id="state0element1block_element1block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch2-case>
+    </div><div data-style-id="state0element1block_element1block_element1" class="slds-col  slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch2-elements-card-case data-style-id="state0element1block_element1block_element1_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch2-elements-card-case>
+    </div><div data-style-id="state0element1block_element1block_element2" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><omnistudio-flex-action data-style-id="state0element1block_element1block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1block_element1block_element2_child flexActionElement" 
+        data-action-element-class="state0element1block_element1block_element2_child" data-action-key="state0element1block_element1block_element2" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action3"   state-obj={record}  card={card}  record={record}  label="Add Member"  icon-name="utility:add"  action-list='\[{"stateAction":{"id":"flex-action-1693510595917","type":"Custom","openUrlIn":"New Tab/Window","targetType":"Object","Object":{"targetName":"CarePlan","targetAction":"new"}},"key":"1693501808490-wdzjo51o6","label":"Create Care Plan Record","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  flyout-channel="close_modal"  icon-size="x-small"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1block_element2" class="slds-col    slds-p-around_x-small  slds-size_4-of-12  " data-rindex={rindex} style="      
+    border-radius:5px;    color:#000000; " >
+    <omnistudio-block data-style-id="state0element1block_element2_child"  card={card}  record={record}  label="Benefit Assignment"  collapsible="true"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element2block_element0" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch3-case data-style-id="state0element1block_element2block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch3-case>
+    </div><div data-style-id="state0element1block_element2block_element1" class="slds-col  slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch3-elements-card-case data-style-id="state0element1block_element2block_element1_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch3-elements-card-case>
+    </div><div data-style-id="state0element1block_element2block_element2" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><omnistudio-flex-action data-style-id="state0element1block_element2block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1block_element2block_element2_child flexActionElement" 
+        data-action-element-class="state0element1block_element2block_element2_child" data-action-key="state0element1block_element2block_element2" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action4"   state-obj={record}  card={card}  record={record}  label="Add Member"  icon-name="utility:add"  action-list='\[{"stateAction":{"id":"flex-action-1693575649359","type":"Custom","openUrlIn":"New Tab/Window","targetType":"Object","Object":{"targetName":"BenefitAssignment","targetAction":"new"}},"key":"1693501808490-wdzjo51o6","label":"Create Related Account","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  flyout-channel="close_modal"  icon-size="x-small"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element2" class="slds-col    slds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element2_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-m-bottom_x-small " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small  slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><c-cf-primary-member-child-card-case data-style-id="state0element0block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-primary-member-child-card-case>
+    </div><div data-style-id="state0element0block_element1" class="slds-col   slds-text-align_center slds-p-left_x-small slds-p-right_x-small  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element0block_element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element0" class="slds-col  slds-text-align_center  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-flex-img data-style-id="state0element0block_element1block_element0_child"   card={card}  record={record}  size=""  extraclass="slds-align_absolute-center"  state-img='\{"imgsrc":"/sfc/servlet.shepherd/version/download/068Dz0000020syKIAQ","alternativeText":"Image description","document":{"label":"Line branch image (3 Branches) (Version:1)","value":"/sfc/servlet.shepherd/version/download/068Dz0000020syKIAQ","title":"Line branch image (3 Branches)","Id":"068Dz0000020syKIAQ","attachmentType":"ContentVersion"}}'  theme="slds"  ></omnistudio-flex-img>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col    slds-p-around_x-small  slds-size_4-of-12  " data-rindex={rindex} style="      
+    border-radius:5px;    color:#000000; " >
+    <omnistudio-block data-style-id="state0element1block_element0_child"  card={card}  record={record}  label="Household"  collapsible="true"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0block_element0" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch1-case data-style-id="state0element1block_element0block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch1-case>
+    </div><div data-style-id="state0element1block_element0block_element1" class="slds-col  slds-border_top slds-border_bottom slds-border_left slds-border_right  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed;border-right: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch1-elements-card-case data-style-id="state0element1block_element0block_element1_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch1-elements-card-case>
+    </div><div data-style-id="state0element1block_element0block_element2" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><omnistudio-flex-action data-style-id="state0element1block_element0block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1block_element0block_element2_child flexActionElement" 
+        data-action-element-class="state0element1block_element0block_element2_child" data-action-key="state0element1block_element0block_element2" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action2"   state-obj={record}  card={card}  record={record}  label="Add Member"  icon-name="utility:add"  action-list='\[{"stateAction":{"id":"flex-action-1693571712592","type":"Custom","openUrlIn":"New Tab/Window","targetType":"Web Page","Web Page":{"targetName":"https://cloudsynapps31--casemgtdev.sandbox.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=169357173375536607"}},"key":"1693501808490-wdzjo51o6","label":"Create Member Record","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  flyout-channel="close_modal"  icon-size="x-small"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1block_element1" class="slds-col    slds-p-around_x-small  slds-size_4-of-12  " data-rindex={rindex} style="      
+    border-radius:5px;    color:#000000; " >
+    <omnistudio-block data-style-id="state0element1block_element1_child"  card={card}  record={record}  label="Care Plan"  collapsible="true"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element1block_element0" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch2-case data-style-id="state0element1block_element1block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch2-case>
+    </div><div data-style-id="state0element1block_element1block_element1" class="slds-col  slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch2-elements-card-case data-style-id="state0element1block_element1block_element1_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch2-elements-card-case>
+    </div><div data-style-id="state0element1block_element1block_element2" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><omnistudio-flex-action data-style-id="state0element1block_element1block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1block_element1block_element2_child flexActionElement" 
+        data-action-element-class="state0element1block_element1block_element2_child" data-action-key="state0element1block_element1block_element2" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action3"   state-obj={record}  card={card}  record={record}  label="Add Member"  icon-name="utility:add"  action-list='\[{"stateAction":{"id":"flex-action-1693510595917","type":"Custom","openUrlIn":"New Tab/Window","targetType":"Object","Object":{"targetName":"CarePlan","targetAction":"new"}},"key":"1693501808490-wdzjo51o6","label":"Create Care Plan Record","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  flyout-channel="close_modal"  icon-size="x-small"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1block_element2" class="slds-col    slds-p-around_x-small  slds-size_4-of-12  " data-rindex={rindex} style="      
+    border-radius:5px;    color:#000000; " >
+    <omnistudio-block data-style-id="state0element1block_element2_child"  card={card}  record={record}  label="Benefit Assignment"  collapsible="true"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element2block_element0" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch3-case data-style-id="state0element1block_element2block_element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch3-case>
+    </div><div data-style-id="state0element1block_element2block_element1" class="slds-col  slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><c-cf-data-tree-branch3-elements-card-case data-style-id="state0element1block_element2block_element1_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-data-tree-branch3-elements-card-case>
+    </div><div data-style-id="state0element1block_element2block_element2" class="slds-col  slds-text-align_center slds-border_top slds-border_right slds-border_bottom slds-border_left  slds-size_12-of-12  " data-rindex={rindex} style="     border-top: #000000 1px dashed;border-right: #000000 1px dashed;border-bottom: #000000 1px dashed;border-left: #000000 1px dashed; 
+    border-radius:5px;    color:#000000; " ><omnistudio-flex-action data-style-id="state0element1block_element2block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1block_element2block_element2_child flexActionElement" 
+        data-action-element-class="state0element1block_element2block_element2_child" data-action-key="state0element1block_element2block_element2" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action4"   state-obj={record}  card={card}  record={record}  label="Add Member"  icon-name="utility:add"  action-list='\[{"stateAction":{"id":"flex-action-1693575649359","type":"Custom","openUrlIn":"New Tab/Window","targetType":"Object","Object":{"targetName":"BenefitAssignment","targetAction":"new"}},"key":"1693501808490-wdzjo51o6","label":"Create Related Account","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  flyout-channel="close_modal"  icon-size="x-small"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element2" class="slds-col    slds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element2_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

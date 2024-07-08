@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "05eaea34-d91c-4411-80b8-ff9ba2524d79",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "Add_Or_Remove_Members__c",
+  "id" : "41b3edd0-7de0-4082-89ba-e30519219dca",
+  "label" : "Add Or Remove Members",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-add-or-remove-members",
+  "type" : "route",
+  "urlPrefix" : "add-or-remove-members"
+}

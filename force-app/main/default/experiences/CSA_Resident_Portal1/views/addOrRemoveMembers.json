@@ -1,0 +1,54 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "05eaea34-d91c-4411-80b8-ff9ba2524d79",
+  "label" : "Add Or Remove Members",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "dir" : "ltr",
+        "flexipageRegionWidth" : "LARGE",
+        "inline" : false,
+        "inlineLabel" : "Launch undefined/undefined",
+        "inlineVariant" : "brand",
+        "layout" : "lightning",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:householdHouseholdEnglish",
+      "id" : "f6b96fc3-17cc-47ef-b2fe-88a060f5078d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9328bcd4-9341-471d-b7d5-4d83e29658d0",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "c9cd07c3-0d47-48b6-84f3-be1dcc53a357",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "a297c0e4-069f-4a06-a5f1-58619f85c71e",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Add Or Remove Members"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c05a2678-35d2-4813-9e9f-4757c9a8ee98",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b9968bf5-654d-4517-af2c-0eeb3e419294",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-add-or-remove-members"
+}

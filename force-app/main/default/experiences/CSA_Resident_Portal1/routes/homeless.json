@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "2a852a4d-609a-4eac-b54b-93e6211bf56f",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "Homeless__c",
+  "id" : "f1c35174-2f98-4df8-a75e-dcd5a30b5467",
+  "label" : "Homeless",
+  "pageAccess" : "RequiresLogin",
+  "routeType" : "custom-homeless",
+  "type" : "route",
+  "urlPrefix" : "homeless"
+}

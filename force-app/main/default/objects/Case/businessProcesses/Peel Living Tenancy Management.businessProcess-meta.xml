@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Peel Living Tenancy Management</fullName>
+    <description>Peel Living Tenancy Management</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Assigned Placement</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Discharged</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Ready for Placement</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

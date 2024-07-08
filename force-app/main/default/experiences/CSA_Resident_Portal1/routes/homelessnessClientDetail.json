@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "10085a54-c1a8-48f6-9853-97237153669d",
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "configurationTags" : [ ],
+  "devName" : "Homelessness_Client_Detail__c",
+  "id" : "a08d89bb-393d-499a-a24f-156b88e0435b",
+  "label" : "Homelessness Client Detail",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-homelessness-client-detail",
+  "type" : "route",
+  "urlPrefix" : "homelessness-client-detail"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Type__c</fullName>
+    <label>Phone Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cell Number</fullName>
+                <default>false</default>
+                <label>Cell Number</label>
+            </value>
+            <value>
+                <fullName>Home Number</fullName>
+                <default>false</default>
+                <label>Home Number</label>
+            </value>
+            <value>
+                <fullName>Other, specify</fullName>
+                <default>false</default>
+                <label>Other, specify</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

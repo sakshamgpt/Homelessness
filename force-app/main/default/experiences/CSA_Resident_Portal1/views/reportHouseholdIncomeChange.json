@@ -1,0 +1,54 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "9018d1ce-3cff-49dd-ba24-8483ac9e0745",
+  "label" : "Report Household Income Change",
+  "regions" : [ {
+    "id" : "36958966-8bd6-4c2c-8608-50bf49444138",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "Multi-Language",
+        "subType" : "Schedule",
+        "theme" : "lightning",
+        "type" : "Benefit"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "7478600b-7229-4395-b3e1-2d616f69478b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a578b17f-d273-482c-8e97-52fa5fc9a5ca",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "663cd0e3-3e14-40f6-8b34-c8e9e20fc313",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Report Household Income Change"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "4e4163b3-5212-4465-8c69-7ad2799ed692",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c2b980c6-21c4-4a54-a2c2-5620599d37d4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-report-household-income-change"
+}

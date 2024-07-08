@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Placement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Placements</value>
+    </caseValues>
+    <layouts>
+        <layout>Placement Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Placement Details --></label>
+            <section>Placement Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- This record type specifies the homelessness --></description>
+        <label><!-- Homelessness --></label>
+        <name>Homelessness</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Move Out Reason is required when Status is Discharge. --></errorMessage>
+        <name>Require_Move_Out_Reason_When_Discharge</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Calculated based on 30% of Annual Household Income divided by 12. --></help>
+    <label><!-- Tenant Rent --></label>
+    <name>Eligible_Monthly_Income_For_Subsidy__c</name>
+</CustomFieldTranslation>

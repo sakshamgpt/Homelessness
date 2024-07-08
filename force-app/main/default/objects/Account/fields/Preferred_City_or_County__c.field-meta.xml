@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_City_or_County__c</fullName>
+    <label>Preferred City or County</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Preferred_State__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Austin</fullName>
+                <default>false</default>
+                <label>Austin</label>
+            </value>
+            <value>
+                <fullName>Corpus Christi</fullName>
+                <default>false</default>
+                <label>Corpus Christi</label>
+            </value>
+            <value>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+                <label>Dallas</label>
+            </value>
+            <value>
+                <fullName>El Paso</fullName>
+                <default>false</default>
+                <label>El Paso</label>
+            </value>
+            <value>
+                <fullName>Fort Worth</fullName>
+                <default>false</default>
+                <label>Fort Worth</label>
+            </value>
+            <value>
+                <fullName>Galveston</fullName>
+                <default>false</default>
+                <label>Galveston</label>
+            </value>
+            <value>
+                <fullName>Houston</fullName>
+                <default>false</default>
+                <label>Houston</label>
+            </value>
+            <value>
+                <fullName>San Antonio</fullName>
+                <default>false</default>
+                <label>San Antonio</label>
+            </value>
+            <value>
+                <fullName>Chigaco</fullName>
+                <default>false</default>
+                <label>Chigaco</label>
+            </value>
+            <value>
+                <fullName>Naperville</fullName>
+                <default>false</default>
+                <label>Naperville</label>
+            </value>
+            <value>
+                <fullName>Rockford</fullName>
+                <default>false</default>
+                <label>Rockford</label>
+            </value>
+            <value>
+                <fullName>Springfield</fullName>
+                <default>false</default>
+                <label>Springfield</label>
+            </value>
+            <value>
+                <fullName>Trenton</fullName>
+                <default>false</default>
+                <label>Trenton</label>
+            </value>
+            <value>
+                <fullName>Winchester</fullName>
+                <default>false</default>
+                <label>Winchester</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>IL</controllingFieldValue>
+            <valueName>Chigaco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IL</controllingFieldValue>
+            <valueName>Naperville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IL</controllingFieldValue>
+            <valueName>Rockford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IL</controllingFieldValue>
+            <valueName>Springfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IL</controllingFieldValue>
+            <valueName>Trenton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IL</controllingFieldValue>
+            <valueName>Winchester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>Austin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>Corpus Christi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>Dallas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>El Paso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>Fort Worth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>Galveston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>Houston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TX</controllingFieldValue>
+            <valueName>San Antonio</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

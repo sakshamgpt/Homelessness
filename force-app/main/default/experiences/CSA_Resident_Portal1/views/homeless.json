@@ -1,0 +1,50 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "2a852a4d-609a-4eac-b54b-93e6211bf56f",
+  "label" : "Homeless",
+  "regions" : [ {
+    "id" : "46d6c3d6-2905-43ad-9bfe-b39c83710bbe",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "600",
+        "pageName" : "FaciltiesMap_Esri",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "b8450902-06d4-466c-8a99-3febe20ba480",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "23d1b3ec-7ad6-4610-8fc7-f51f802e3845",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "689d366c-484e-4e46-ae8d-03377f0a8746",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Homeless"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8876294f-15eb-47d6-980e-6af0e6215486",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3e20cee8-b838-4f0d-acaa-8efc9ed12cdf",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-homeless"
+}

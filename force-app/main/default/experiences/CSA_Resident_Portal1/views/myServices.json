@@ -1,0 +1,84 @@
+{
+  "appPageId" : "c630b680-2558-4566-88a2-3f04a8b23d5c",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "31972239-d88d-41b0-9577-46d389017fd4",
+  "label" : "My Services",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "419605cc-d789-4be0-bbaf-bd09dc760a32",
+          "columns" : [ {
+            "UUID" : "a4378390-c478-4c0b-9177-0d4050bf93af",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "419605cc-d789-4be0-bbaf-bd09dc760a32",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "default",
+            "tileMenuEditor" : "My_Services_Menu",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "3abd6bbe-00f1-45b2-bf77-97c66dcb740c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a4378390-c478-4c0b-9177-0d4050bf93af",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "31e383a2-e61b-4bf1-b15d-dfdd1fca97b9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Services"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "42796eec-1e9c-4eee-96f5-4ba6a2c1c9d3",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7f4f773b-b879-4585-afcc-734da5f31e68",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-services"
+}

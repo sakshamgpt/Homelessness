@@ -1,0 +1,139 @@
+.web-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Adjust as needed */
+    background-color: #f2f2f2; /* Set your desired background color */
+    /* Or use background-image: url('path/to/your/image.jpg'); for an image */
+    /* Other background properties like background-size, background-repeat, etc., can be added here */
+}
+
+.branch {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+a.slds-button {
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    display: none; /* Initially hide the buttons */
+}
+
+.branch-title {
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+.branch-care-plan:hover,
+.branch-benefits:hover,
+.branch-goals:hover {
+    transform: scale(1.1); /* Scale the component on hover */
+}
+
+.branch:hover::after {
+    content: attr(data-info); /* Display additional information */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    width: 300px;
+    height: 135px;
+    padding: 15px;
+    border-radius: 1%;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition for smooth effect */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text horizontally */
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Exclude button from mouse events */
+    mask: /* Create a rectangular cutout for the button */
+        radial-gradient(circle, transparent 0%, transparent 70%, black 70%) /* Circular cutout */,
+        polygon(0 0, 100% 0, 100% 70%, 70% 70%, 70% 100%, 0 100%); /* Rectangular cutout */
+}
+
+.branch:hover::after {
+    opacity: 1; /* Show additional information on hover */
+}
+
+.branch-care-plan {
+    left: 5%;
+    background-image: url('https://cloudsynapps31--casemgtdev.sandbox.file.force.com/servlet/servlet.ImageServer?id=015Dz000001d1Eq&oid=00DDz000001qdVc&lastMod=1708439737000');
+    background-size: cover;
+}
+
+.branch-benefits {
+    background-image: url('https://cloudsynapps31--casemgtdev.sandbox.file.force.com/servlet/servlet.ImageServer?id=015Dz000001d1Ma&oid=00DDz000001qdVc&lastMod=1708549720000');
+    background-size: cover;
+}
+
+.branch-goals {
+    right: 5%;
+    background-image: url('https://cloudsynapps31--casemgtdev.sandbox.file.force.com/servlet/servlet.ImageServer?id=015Dz000001d1F0&oid=00DDz000001qdVc&lastMod=1708439896000');
+    background-size: cover;
+}
+
+/* Button styles */
+.branch:hover::after button {
+    margin-top: 10px; /* Add margin between buttons */
+    padding: 8px 16px; /* Adjust padding as needed */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Adjust border radius as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.branch:hover::after button:hover {
+    background-color: #45a049; /* Darker background color on hover */
+}
+
+/* Updated CSS for the hover tooltip */
+.branch:hover .branch-buttons {
+    display: flex; /* Show buttons when hovering over the branch */
+}
+
+.branch-buttons {
+    display: none; /* Hide buttons by default */
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+}
+
+.central-node {
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    border: 2px solid #000;
+    z-index: 0;
+    /* Adjust position based on the central node and branches */
+}

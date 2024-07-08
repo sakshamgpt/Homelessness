@@ -1,0 +1,74 @@
+<!-- caseRelatedInfoAccordion.html -->
+<template>
+    <lightning-accordion allow-multiple-sections-open active-section-name={activeSections}>
+        <lightning-accordion-section label={parentaccountName} name="householdaccount">
+            <template for:each={personaccounts} for:item="account">
+            <lightning-accordion-section key ={account.Id} label={account.Name} name={account.Id}>
+                <lightning-accordion-section label="Care Plans" name="carePlans">
+                <template if:true={account.careplans.length}>
+                    
+                    <lightning-datatable
+                        key-field="Id"
+                        data={account.careplans}
+                        columns={carePlanColumns}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column>
+                    </lightning-datatable>
+                    
+                </template>
+                <template if:false={account.careplans.length}>
+                    No Care Plans found.
+                </template>
+            </lightning-accordion-section>
+                <lightning-accordion-section label="Benefit Assignments" name="benefitAssignments">
+                    <template if:true={account.benefitassignments.length}>
+                        <lightning-datatable
+                            key-field="Id"
+                            data={account.benefitassignments}
+                            columns={benefitAssignmentColumns}
+                            onrowaction={handleRowAction}
+                            hide-checkbox-column>
+                            
+                        </lightning-datatable>
+                    </template>
+                    <template if:false={account.benefitassignments.length}>
+                        No Benefit Assignments found.
+                    </template>
+                </lightning-accordion-section>
+            </lightning-accordion-section>
+        </template>
+        </lightning-accordion-section>
+        <!--<lightning-accordion-section label="Care Plans" name="carePlans">
+            <template if:true={carePlans}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={carePlans}
+                    columns={carePlanColumns}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column>
+                    
+                </lightning-datatable>
+            </template>
+            <template if:false={carePlans}>
+                No Care Plans found.
+            </template>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section label="Benefit Assignments" name="benefitAssignments">
+            <template if:true={benefitAssignments}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={benefitAssignments}
+                    columns={benefitAssignmentColumns}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column>
+                    
+                </lightning-datatable>
+            </template>
+            <template if:false={benefitAssignments}>
+                No Benefit Assignments found.
+            </template>
+        </lightning-accordion-section>
+    </lightning-accordion-section>-->
+    </lightning-accordion>
+</template>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Homelessness_Intake</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Create Homelessness Intake</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>{!URLFOR(&apos;/lightning/cmp/omnistudio__vlocityLWCOmniWrapper&apos;, null, [
+    c__target=&apos;c:homelessnessIntakeEnglish&apos;,
+    c__layout=&apos;lightning&apos;,
+    c__tabIcon=&apos;custom:custom18&apos;,
+    c__tabLabel=&apos;Homelessness Intake&apos;,
+    c__ContextId=Application__c.Id
+])}</url>
+</WebLink>
